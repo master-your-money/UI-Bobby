@@ -1,0 +1,40 @@
+#showcase {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+  url("../images/header.jpg");	
+  background-size: cover;
+  background-position: center;
+  height: 67vh;
+	/* using flex to center content */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;;
+	/* end */
+	text-align: center;
+	padding: 100px 20px;
+  color: #fff;
+  z-index: -1;
+}
+
+.showcase-cta {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
+  h1 {
+    font-size: 50px;
+    line-height: 1.2em;
+    padding-bottom: 20px;
+  }
+  
+  p {
+    font-size: 25px;
+    line-height: 1.6em;
+    max-width: 80%;
+    padding-bottom: 20px;
+
+  }
+}
