@@ -130,7 +130,7 @@ body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
   font-size: 17px;
-  color: #000;
+  color: #333;
   line-height: 1.6em;
 }
 #showcase {
@@ -138,12 +138,6 @@ body {
   background-size: cover;
   background-position: center;
   height: 67vh;
-  /* using flex to center content */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  /* end */
   text-align: center;
   padding: 100px 20px;
   color: #fff;
@@ -155,18 +149,61 @@ body {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
+  padding-top: 100px;
   z-index: 2;
 }
+@media (max-width: 500px) {
+  .showcase-cta {
+    padding-top: 90px;
+  }
+}
 .showcase-cta h1 {
-  font-size: 50px;
+  font-size: 60px;
   line-height: 1.2em;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+}
+@media (max-width: 700px) {
+  .showcase-cta h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .showcase-cta h1 {
+    font-size: 40px;
+  }
 }
 .showcase-cta p {
-  font-size: 25px;
+  font-size: 30px;
   line-height: 1.6em;
   max-width: 80%;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+}
+@media (max-width: 700px) {
+  .showcase-cta p {
+    font-size: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .showcase-cta p {
+    font-size: 20px;
+    max-width: 90%;
+  }
+}
+.showcase-cta .sign-up {
+  font-size: 17px;
+  margin-top: 10px;
+}
+.showcase-cta .sign-up a {
+  font-size: 17px;
+  text-decoration: none;
+  color: #11998e;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+}
+.showcase-cta .sign-up a:hover {
+  color: #fff;
+  border-bottom: 1px solid #11998e;
 }
 .btn-container {
   display: flex;
@@ -177,7 +214,7 @@ body {
   font-weight: 800;
   letter-spacing: 1px;
   text-decoration: none;
-  color: #fff;
+  color: #333;
   background: #11998e;
   /* fallback for old browsers */
   background: linear-gradient(to right, #38ef7d, #11998e);
@@ -185,49 +222,118 @@ body {
   border-radius: 10px;
   margin-top: 20px;
   text-transform: uppercase;
+  transition: 0.3s;
 }
 .btn-container .button.button:hover {
+  color: #11998e;
   background: #fff;
+}
+.btn-container .small-button {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
   color: #333;
+  background: #11998e;
+  /* fallback for old browsers */
+  background: linear-gradient(to right, #38ef7d, #11998e);
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.btn-container .small-button:hover {
+  color: #11998e;
+  background: #d3d3d3;
 }
 #navbar {
   text-transform: uppercase;
   position: absolute;
   top: 5%;
 }
-#navbar ul {
-  display: flex;
-  justify-content: flex-end;
-}
-#navbar li {
-  padding: 0 10px;
-  list-style: none;
-}
 #navbar a {
   text-decoration: none;
   color: #fff;
+  padding: 0 10px;
+  list-style: none;
+  margin-bottom: 150px;
 }
 #navbar a:hover {
-  color: #333;
-  border-bottom: 3px solid #fff;
-  padding-bottom: 5px;
+  color: #11998e;
 }
 #navbar .current {
   color: #fff;
   border-bottom: 3px solid #fff;
   padding-bottom: 5px;
 }
-.mission-statement {
-  padding: 20px;
+#navbar .nav-button {
+  background: linear-gradient(to right, #38ef7d, #11998e);
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+#navbar .nav-button:hover {
+  color: #11998e;
+  background: #fff;
+  box-sizing: border-box;
+}
+.main-footer {
   background: #333;
-  color: #f4f4f4;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  margin-top: 30px;
+}
+.mission-statement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background: #333;
+  color: #333;
+  font-weight: 600;
+  font-size: 20px;
+  background: #f1f1f1;
+  text-align: left;
+  line-height: 2em;
+  padding-bottom: 50px;
+}
+.mission-statement h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #11998e;
+  border-bottom: 3px solid #11998e;
+}
+.mission-statement p {
+  width: 60%;
+}
+.login-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background: #fff;
+  color: #333;
+  font-weight: 600;
+  font-size: 20px;
   text-align: center;
   line-height: 2em;
 }
-.login-cta {
-  padding: 20px;
-  background: #f4f4f4;
-  color: #333;
-  text-align: center;
-  line-height: 2em;
+.login-cta h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #11998e;
+  border-bottom: 3px solid #11998e;
+}
+.login-cta p {
+  width: 80%;
 }

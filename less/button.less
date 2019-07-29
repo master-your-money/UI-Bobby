@@ -6,19 +6,38 @@
         font-weight: 800;
         letter-spacing: 1px;
         text-decoration: none;
-        color: #fff;
-        background: #11998e;  /* fallback for old browsers */
-        background: linear-gradient(to right, #38ef7d, #11998e);
-
+        color: @black;
+        background: @default;  /* fallback for old browsers */
+        background: @gradient;
         padding: 10px 100px;
         border-radius: 10px;
         margin-top: 20px;
         text-transform: uppercase;
+        transition: 0.3s;
         
         &.button:hover {
-            background: #fff;
-            color: #333;
-            
+            color: @default;
+            background: @white;
+        }
+    }
+
+    .small-button {
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: @black;
+        background: @default;  /* fallback for old browsers */
+        background: @gradient;
+        padding: 10px 30px;
+        border-radius: 10px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        transition: 0.3s;
+        
+        &:hover {
+            color: @default;
+            background: @grey;
         }
     }
 }

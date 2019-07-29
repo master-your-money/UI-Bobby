@@ -1,34 +1,42 @@
 #navbar {
     text-transform: uppercase;
-    // padding-bottom: 150px;
 	position: absolute;
     top: 5%;
-
-    ul {
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    li {
-        padding: 0 10px;
-        list-style: none;
-    }
     
     a {
         text-decoration: none;
-        color: #fff;
+        color: @white;
+        padding: 0 10px;
+        list-style: none;
+        margin-bottom: 150px;
+
     }
     
     a:hover {
-        color: #333;
-        border-bottom: 3px solid #fff;
-        padding-bottom: 5px;
+        color: @default;
     }
     
     .current {
-        color: #fff;
-        border-bottom: 3px solid #fff;
+        color: @white;
+        border-bottom: 3px solid @white;
         padding-bottom: 5px;
+    }
+
+    .nav-button {
+        background: @gradient;
+        color: @black;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        transition: 0.3s;
+    
+        &:hover {
+            color: @default;
+            background: @white;
+            box-sizing: border-box;
+        }
     }
 }
 
